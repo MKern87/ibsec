@@ -55,6 +55,10 @@ export default {
             transform: "translateX(0%)",
           },
         },
+        slideUp: {
+          '0%': { transform: 'translateY(100%)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
         "grow-left": {
           "0%": {
             width: "0%",
@@ -93,6 +97,14 @@ export default {
             transform: "translateX(0%)",
           },
         },
+        moveLeftSlow: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+        moveRightFast: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
         'fadeIn': {
           '0%': {
             opacity: 0,
@@ -125,13 +137,16 @@ export default {
         "slide-in": "slide-in 0.5s ease-out",
         "slide-inleft": "slide-inleft 0.5s ease-out",
         "slide-inright": "slide-inright 0.5s ease-out",
+        slideUp: 'slideUp 0.75s ease-out forwards',
         'spin-slow': 'spin 3s linear infinite',
         'fadeInw': 'fadeInNav 1s',
         'fadeOut': 'fadeOut 1s',
         'growleft': 'grow-left 0.5s ease-out',
         'growLeft': 'growLeft 0.5s ease-out',
         'fadeIn': 'fadeIn 1s',
-        'fadeInfast': 'fadeIn 0.3s'
+        'fadeInfast': 'fadeIn 0.3s',
+        leftSlow: 'moveLeftSlow 20s linear infinite',
+        rightFast: 'moveRightFast 15s linear infinite',
       },
     },
   },
